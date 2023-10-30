@@ -8,7 +8,6 @@
 </head>
 <body>
     <main>
-        
         <h1>Relatório & Feedback</h1>
         <p>
             <?php
@@ -57,20 +56,19 @@
                 ?>
 
                 <?php
-
-                
                 // Exibe os resultados
-                echo "<p>Taxa de Aderência: " . $taxaAderencia . "%</p>";
+                echo "<p>Taxa de Aderência: <span style='color: green;'>" . number_format($taxaAderencia, 2) . "%</span></p>";
+
             
                 if ($taxaAderencia == 0) {
                     $status = "ABERTO";
-                    echo "<p>Status:". $status . "</p>";
+                    echo "<p>Status: <span style='color: blue;'>$status</span></p>";
                 } else if ($taxaAderencia < 100) {
                     $status = "EM ANDAMENTO";
-                    echo "<p>Status:". $status . "</p>";
+                    echo "<p>Status: <span style='color: blue;'>$status</span></p>";
                 } else {
                     $status = "FECHADO";
-                    echo "<p>Status:". $status . "</p>";
+                    echo "<p>Status: <span style='color: blue;'>$status</span></p>";
                 }
                 ?>
                 
@@ -110,7 +108,7 @@
                 <?php
                 echo "<p><strong>Não Conformidades apresentadas:</strong></p>";
                 if ($taxaAderencia == 100) {
-                    echo "<p class='verde'>Nenhuma inconformidade relatada!</p>";
+                    echo "<p class='verde'><strong>Nenhuma inconformidade relatada!!</strong></p>";
                 } else {
                     echo "<ul>";
                     foreach ($_POST as $key => $value) {
