@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Não Conformidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Solicitação</h1>
+        <form action="form.php" method="post">
+            <label for="resp">Nome do Responsável: </label>
+            <input type="text" name="resp" id="resp" required>
+            <label for="rqaresp">RQA Responsável: </label>
+            <input type="text" name="rqaresp" id="rqaresp" required>
+            <label for="inicio">Data: </label>
+            <input type="date" name="inicio" id="inicio" required>
+            <label for="final">Data do Prazo: </label>
+            <input type="date" name="final" id="final" required>
+            <button type="submit">Próximo</button>
+        </form>
+    </main>
+</body>
+</html>
