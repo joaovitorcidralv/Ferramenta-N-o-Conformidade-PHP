@@ -17,6 +17,8 @@
                 $rqaresp = $_POST['rqaresp'];
                 $inicio = $_POST['inicio'];
                 $final = $_POST['final'];
+                $resp_email = $_POST['resp_email'];
+                $rqaresp_email = $_POST['rqaresp_email'];
 
                 // Descrições das perguntas
             $perguntasNaoConformes = array(
@@ -86,13 +88,21 @@
                 </style>
 
                 <table>
-                    <tr>
+                     <tr>
                         <td><strong>Nome do Responsável:</strong></td>
                         <td><?php echo $resp; ?></td>
                     </tr>
                     <tr>
+                        <td><strong>Email do Responsável:</strong></td>
+                        <td><?php echo $resp_email; ?></td>
+                    </tr>
+                    <tr>
                         <td><strong>RQA Responsável:</strong></td>
                         <td><?php echo $rqaresp; ?></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email do RQA Responsável:</strong></td>
+                        <td><?php echo $rqaresp_email; ?></td>
                     </tr>
                     <tr>
                         <td><strong>Data:</strong></td>
